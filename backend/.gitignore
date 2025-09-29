@@ -1,0 +1,49 @@
+# === Python / Django ===
+__pycache__/
+*.py[cod]
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+*.sqlite3
+db.sqlite3
+instance/
+
+# Archivos de configuración sensibles
+.env
+.env.local
+.env.*.local
+
+# === Virtualenv ===
+env/
+venv/
+ENV/
+.venv/
+
+# === Archivos de migraciones compilados ===
+*/migrations/__pycache__/
+*/migrations/*.pyc
+*/migrations/*.pyo
+
+# === Archivos de la base de datos / dumps ===
+*.sql
+*.sqlite
+*.db
+*.dump
+
+# === Archivos del sistema operativo ===
+.DS_Store
+Thumbs.db
+
+# === IDEs / editores ===
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# === Testing / Coverage ===
+coverage/
+htmlcov/
+.pytest_cache/
