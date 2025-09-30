@@ -28,6 +28,7 @@ INSTALLED_APPS = [
 
     # Apps creadas
     "apps.authentication",
+    'apps.chat',
 ]
 
 MIDDLEWARE = [
@@ -105,3 +106,5 @@ REST_FRAMEWORK = {
         "rest_framework_simplejwt.authentication.JWTAuthentication",
     ),
 }
+
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
