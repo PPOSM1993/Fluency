@@ -2,15 +2,17 @@ from pathlib import Path
 import os
 from dotenv import load_dotenv
 
+
 load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", "fallback_secret")
-
 DEBUG = os.getenv("DJANGO_DEBUG", "False").lower() in ["true", "1", "t"]
-
 ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "localhost").split(",")
+
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -24,10 +26,12 @@ INSTALLED_APPS = [
     "rest_framework",
     "corsheaders",
     'django_filters',
+    'gTTS',
     'drf_yasg',
 
     # Apps creadas
     "apps.authentication",
+    'apps.chat',
 ]
 
 MIDDLEWARE = [
@@ -105,3 +109,5 @@ REST_FRAMEWORK = {
         "rest_framework_simplejwt.authentication.JWTAuthentication",
     ),
 }
+
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"

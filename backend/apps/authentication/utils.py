@@ -15,11 +15,11 @@ def send_confirmation_email(request, user):
         reverse('confirm-email', kwargs={'uidb64': uid, 'token': token})
     )
 
-    subject = 'Confirma tu cuenta en CineWave'
+    subject = 'Confirma tu cuenta de Fluency'
     message = f'''
     Hola {user.first_name},
 
-    Gracias por registrarte en CineWave. Para activar tu cuenta, haz clic en el siguiente enlace:
+    Gracias por registrarte en Fluency. Para activar tu cuenta, haz clic en el siguiente enlace:
 
     {activation_url}
 

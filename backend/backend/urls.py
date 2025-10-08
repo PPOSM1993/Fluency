@@ -33,4 +33,5 @@ urlpatterns = [
     ),
     path("redoc/", schema_view.with_ui("redoc", cache_timeout=0), name="schema-redoc"),
     path("api/authentication/", include("apps.authentication.urls")),
+    path('api/chat/', include('apps.chat.urls')),
 ]
