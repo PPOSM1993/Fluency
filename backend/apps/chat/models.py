@@ -21,3 +21,9 @@ class Message(models.Model):
     def __str__(self):
         text_preview = self.content[:50] if self.content else "[AUDIO]"
         return f"{self.role}: {text_preview}"
+
+
+
+
+
+    
